@@ -24,7 +24,7 @@ class ListController extends Controller
     }
     public function index()
     {
-        $fileToRead  = __DIR__ . "../../../../resources/video_list.csv";
+        $fileToRead  = resource_path("video_list.csv");
         $file = fopen($fileToRead,"r");
         $bunchID = $this->setBunchId($file);
         $group25 = array_chunk($bunchID, 25);

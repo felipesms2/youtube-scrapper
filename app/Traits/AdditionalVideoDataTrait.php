@@ -152,9 +152,10 @@ trait AdditionalVideoDataTrait
                     $contentNumber = $v->id;
                     $placeToSave = ( __DIR__ . "../../../storage/app/videos/tmp");
                     shell_exec("
+                        source ~/general_use/bin/activate
                         cd $placeToSave;
-                        pytube " . $urlPrefix . $urlSufix . ";" .
-                        "mv *.mp4 ../$contentNumber.mp4"
+                        yt-dlp " . $urlPrefix . $urlSufix . ";" .
+                        "mv *.mp4 ../$contentNumber.mp4; mv *.webm ../$contentNumber.webm"
                     );
                 }
 

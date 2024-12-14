@@ -1,6 +1,6 @@
 import scrapetube
 
-videos = scrapetube.get_channel("UCDjzWHhTShC59KtduL-jeig")
+videos = scrapetube.get_channel("UCib793mnUOhWymCh2VJKplQ")
 
 file = open('video_list.csv', 'w')
 for video in videos:
